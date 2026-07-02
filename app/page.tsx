@@ -32,22 +32,22 @@ export default function HomePage() {
 
   return (
     <main>
-      <section className="flex h-[80vh] min-h-[500px] flex-col md:flex-row">
-        <div className="flex flex-col items-center justify-center bg-white p-6 md:h-auto md:w-1/3 md:p-10">
-          <div className="relative h-[260px] w-full max-w-[320px]">
+      <section className="flex h-[85vh] min-h-[540px] flex-col md:flex-row">
+        <div className="flex flex-col items-center justify-center bg-white p-6 md:h-auto md:w-2/5 md:p-12">
+          <div className="relative h-[340px] w-full max-w-[380px]">
             <Image
               src="/logo-with-name.png"
               alt="Logo with name"
               fill
               className="object-contain"
-              sizes="(min-width: 768px) 33vw, 100vw"
+              sizes="(min-width: 768px) 40vw, 100vw"
             />
           </div>
-          <div className="mt-6 flex w-full max-w-[320px] flex-col gap-3 text-center">
-            <Button asChild className="w-full" size="lg">
+          <div className="mt-8 flex w-full max-w-[380px] flex-col gap-4 text-center">
+            <Button asChild className="h-14 w-full text-lg" size="lg">
               <Link href="#register-interest">Register Interest</Link>
             </Button>
-            <Button variant="outline" className="w-full" size="lg">
+            <Button variant="outline" className="h-14 w-full text-lg" size="lg">
               Learn More
             </Button>
           </div>
