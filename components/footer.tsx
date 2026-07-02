@@ -1,6 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MessageCircle } from "lucide-react"
+import {
+  FaFacebook,
+  FaWhatsapp,
+  FaEnvelope,
+  FaTelegramPlane,
+} from "react-icons/fa"
+import { SiLine } from "react-icons/si"
 
 import { Button } from "@/components/ui/button"
 import { APP_NAME, CONTACT } from "@/constants"
@@ -17,11 +23,17 @@ export function Footer() {
                 alt={`${APP_NAME} logo`}
                 width={72}
                 height={72}
-                className="size-11 shrink-0 rounded-2xl bg-background object-cover shadow-sm"
+                className="size-11 shrink-0 rounded-sm bg-background object-cover shadow-sm"
               />
               <div className="min-w-0">
-                <p className="truncate text-sm font-semibold">{APP_NAME}</p>
-                <p className="truncate text-sm text-muted-foreground">
+                <Image
+                  src="/logo-name.png"
+                  alt="Logo name"
+                  width={150}
+                  height={32}
+                  className="max-w-full object-contain"
+                />
+                <p className="truncate text-sm text-[#a47b3b]">
                   One to One Matchmaking
                 </p>
               </div>
@@ -32,14 +44,14 @@ export function Footer() {
                 asChild
                 variant="outline"
                 size="sm"
-                className="rounded-full"
+                className="rounded-sm"
               >
                 <a
                   href={`https://wa.me/${CONTACT.whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MessageCircle className="size-4" />
+                  <FaWhatsapp className="size-4" />
                   WhatsApp
                 </a>
               </Button>
@@ -47,11 +59,56 @@ export function Footer() {
                 asChild
                 variant="outline"
                 size="sm"
-                className="rounded-full"
+                className="rounded-sm"
               >
                 <a href={`mailto:${CONTACT.email}`}>
-                  <Mail className="size-4" />
+                  <FaEnvelope className="size-4" />
                   Email
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-sm"
+              >
+                <a
+                  href="https://www.facebook.com/siamsoulmates"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaFacebook className="size-4" />
+                  Facebook
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-sm"
+              >
+                <a
+                  href="https://line.me/R/ti/p/@siamsoulmates"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SiLine className="size-4" />
+                  Line
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-sm"
+              >
+                <a
+                  href="https://t.me/siamsoulmates"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTelegramPlane className="size-4" />
+                  Telegram
                 </a>
               </Button>
             </div>

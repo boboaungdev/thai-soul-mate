@@ -53,7 +53,7 @@ export function NavBar() {
               priority
             />
             <div className="pl-1">
-              <p className="truncate text-xs text-[#c8a74d]">{APP_TAGLINE}</p>
+              <p className="truncate text-xs text-[#a47b3b]">{APP_TAGLINE}</p>
               <p className="truncate text-[11px] text-[#d96088]">
                 Dating in Thailand
               </p>

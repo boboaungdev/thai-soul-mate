@@ -29,10 +29,7 @@ interface RandomUser {
   }
 }
 
-import {
-  ScrollArea,
-  ScrollBar,
-} from "@/components/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
 export function UserGallery() {
   const [users, setUsers] = useState<RandomUser[]>([])
