@@ -1,37 +1,34 @@
 "use client"
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { APP_NAME, APP_TAGLINE } from "@/constants"
+import Image from "next/image"
 import { UserGallery } from "@/components/user-gallery"
 import { Faq } from "@/components/faq"
 
 export default function HomePage() {
   return (
     <main>
-      <section
-        className="relative flex h-[80vh] min-h-[500px] flex-col items-center justify-center bg-cover bg-center px-4 text-center text-white"
-        style={{ backgroundImage: "url(/home-landing.png)" }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 space-y-6">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-            {APP_NAME}
-          </h1>
-          <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/auth">Get Started</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white transition-opacity hover:bg-white/10 hover:opacity-100"
-            >
-              <Link href="#gallery">Learn More</Link>
-            </Button>
+      <section className="flex h-[80vh] min-h-[500px] flex-col md:flex-row">
+        <div className="relative flex h-56 items-center justify-center bg-white p-6 md:h-auto md:w-1/3 md:p-10">
+          <div className="relative h-full w-full max-w-[320px]">
+            <Image
+              src="/logo-with-name.png"
+              alt="Logo with name"
+              fill
+              className="object-contain"
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
           </div>
+        </div>
+        <div className="relative md:w-2/3">
+          <Image
+            src="/home-landing.png"
+            fill
+            unoptimized
+            className="object-cover"
+            alt="Landing photo"
+            sizes="(min-width: 768px) 67vw, 100vw"
+            quality={100}
+          />
         </div>
       </section>
 
