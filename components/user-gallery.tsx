@@ -71,6 +71,15 @@ export function UserGallery() {
     }
   }
 
+  const getUserId = (uuid: string) => {
+    let hash = 0
+    for (const char of uuid) {
+      if (char === "-") continue
+      hash = (hash * 31 + char.charCodeAt(0)) % 9000
+    }
+    return String(hash + 1000).padStart(4, "0")
+  }
+
   return (
     <div className="relative">
       <div className="absolute inset-y-0 -left-4 z-10 hidden items-center md:flex">
@@ -91,7 +100,7 @@ export function UserGallery() {
             ? Array.from({ length: 5 }).map((_, index) => (
                 <Card
                   key={index}
-                  className="relative h-[380px] w-[280px] shrink-0 overflow-hidden"
+                  className="relative h-[380px] w-[280px] shrink-0 overflow-hidden border-2 border-[#a47b3b] border-b-[#a67a34] border-r-[#a67a34]"
                 >
                   <Skeleton className="size-full" />
                 </Card>
@@ -102,7 +111,7 @@ export function UserGallery() {
                   key={user.login.uuid}
                   className="block"
                 >
-                  <Card className="group relative h-[380px] w-[280px] shrink-0 overflow-hidden">
+                  <Card className="group relative h-[380px] w-[280px] shrink-0 overflow-hidden border-2 border-[#a47b3b] border-b-[#a67a34] border-r-[#a67a34]">
                     <Image
                       src={user.picture.large}
                       alt={`${user.name.first} ${user.name.last}`}
@@ -112,7 +121,9 @@ export function UserGallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                       <p className="text-lg font-semibold">
-                        {user.name.first} {user.name.last}, {user.dob.age}
+                        <span className="text-[#a47b3b]">ID {getUserId(user.login.uuid)}</span>
+                        <span className="text-white">, </span>
+                        <span className="text-[#d96088]">{user.dob.age}</span>
                       </p>
                       <p className="text-sm">
                         {user.location.city}, {user.location.country}
