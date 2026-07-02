@@ -66,33 +66,20 @@ export function NavBar() {
             const active = pathname === item.href
 
             return (
-              <span
+              <Button
                 key={item.href}
-                className="rounded-full border border-pink-400 p-[0.5px]"
+                asChild
+                variant="ghost"
+                size="sm"
+                className={cn(
+                  "rounded-md border px-2.5",
+                  active
+                    ? "border-[#ac3554] bg-[#d0a250] text-slate-950"
+                    : "border-[#ac3554] bg-background text-foreground"
+                )}
               >
-                <span
-                  className={cn(
-                    "block rounded-full p-[0.5px]",
-                    active
-                      ? "border border-transparent"
-                      : "border border-amber-300"
-                  )}
-                >
-                  <Button
-                    asChild
-                    variant="ghost"
-                    size="sm"
-                    className={cn(
-                      "rounded-full px-2.5",
-                      active
-                        ? "bg-amber-200 text-slate-950"
-                        : "bg-background text-foreground"
-                    )}
-                  >
-                    <Link href={item.href}>{item.label}</Link>
-                  </Button>
-                </span>
-              </span>
+                <Link href={item.href}>{item.label}</Link>
+              </Button>
             )
           })}
         </nav>
@@ -102,7 +89,7 @@ export function NavBar() {
           <LanguageSwitcher />
           <div className="hidden items-center gap-2 lg:flex">
             <Button asChild className="rounded-md">
-              <Link href="/auth?mode=signup">Get Started</Link>
+              <Link href="/auth?mode=signup">Login</Link>
             </Button>
           </div>
 
@@ -142,7 +129,7 @@ export function NavBar() {
                       onClick={() => router.push("/auth?mode=signup")}
                       className="flex cursor-pointer items-center justify-between rounded-md bg-primary px-3 py-2.5 text-primary-foreground"
                     >
-                      <span>Get Started</span>
+                      <span>Login</span>
                       <ArrowUpRight className="size-4" />
                     </div>
                   </SheetClose>
