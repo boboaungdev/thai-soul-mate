@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils"
 const SITE_NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Service", href: "#" },
+  { label: "Service", href: "/service" },
   { label: "Gallery", href: "#gallery" },
 ] as const
 
@@ -55,7 +55,7 @@ export function NavBar() {
             <div className="pl-1">
               <p className="truncate text-xs text-[#a47b3b]">{APP_TAGLINE}</p>
               <p className="truncate text-[11px] text-[#d96088]">
-                Dating in Thailand
+                {APP_TAGLINE}
               </p>
             </div>
           </div>
