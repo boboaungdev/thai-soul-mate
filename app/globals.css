@@ -80,6 +80,8 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --gold: oklch(58.8% 0.113 60.18);
+  --pink: oklch(60.1% 0.18 351.1);
 }
 
 .dark {
@@ -114,6 +116,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --gold: oklch(58.8% 0.113 60.18);
+  --pink: oklch(60.1% 0.18 351.1);
 }
 
 @layer base {
@@ -153,6 +157,14 @@
 }
 
 @layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .text-pink {
+    color: var(--pink);
+  }
+
   @keyframes bg-pan {
     0% {
       background-position: 0% 50%;

@@ -1,15 +1,16 @@
 import { APP_NAME } from "@/constants"
+import { cn } from "@/lib/utils"
 
 type StyledAppNameProps = {
-  name?: string;
-  goldColorClass?: string;
-  pinkColorClass?: string;
+  name?: string
+  goldColorClass?: string
+  pinkColorClass?: string
 }
 
 export function StyledAppName({
   name = APP_NAME,
-  goldColorClass = "text-[#a47b3b]", // Using the color found in footer/nav-bar
-  pinkColorClass = "text-[#d96088]", // Using the color found in nav-bar
+  goldColorClass = "text-gold",
+  pinkColorClass = "text-pink",
 }: StyledAppNameProps) {
   const words = name.split(" ")
 
@@ -22,8 +23,8 @@ export function StyledAppName({
 
   return (
     <>
-      <span className={goldColorClass}>{firstWord}</span>{" "}
-      <span className={pinkColorClass}>{restOfWords}</span>
+      <span className={cn(goldColorClass, "font-bold")}>{firstWord}</span>{" "}
+      <span className={cn(pinkColorClass, "font-bold")}>{restOfWords}</span>
     </>
   )
 }
