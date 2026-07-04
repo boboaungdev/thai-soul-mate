@@ -116,6 +116,7 @@ export function UserGallery() {
                       src={user.picture.large}
                       alt={`${user.name.first} ${user.name.last}`}
                       fill
+                      sizes="280px"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

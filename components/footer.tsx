@@ -31,7 +31,7 @@ export function Footer() {
                   alt="Logo name"
                   width={150}
                   height={32}
-                  className="max-w-full object-contain"
+                  className="h-auto w-auto object-contain"
                 />
                 <p className="truncate text-sm text-[#a47b3b]">
                   One to One Matchmaking

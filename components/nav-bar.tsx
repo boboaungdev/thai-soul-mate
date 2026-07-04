@@ -89,7 +89,7 @@ export function NavBar() {
           <LanguageSwitcher />
           <div className="hidden items-center gap-2 lg:flex">
             <Button asChild className="rounded-md">
-              <Link href="/auth?mode=signup">Login</Link>
+              <Link href="">Login</Link>
             </Button>
           </div>
 
@@ -126,7 +126,7 @@ export function NavBar() {
                   ))}
                   <SheetClose asChild>
                     <div
-                      onClick={() => router.push("/auth?mode=signup")}
+                      onClick={() => router.push("")}
                       className="flex cursor-pointer items-center justify-between rounded-md bg-primary px-3 py-2.5 text-primary-foreground"
                     >
                       <span>Login</span>
