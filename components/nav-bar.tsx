@@ -24,7 +24,7 @@ const SITE_NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Service", href: "/service" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Gallery", href: "/gallery" },
 ] as const
 
 export function NavBar() {

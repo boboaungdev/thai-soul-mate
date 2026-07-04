@@ -1,20 +1,12 @@
-import { UserGallery } from "@/components/user-gallery"
+import { GalleryGrid } from "@/components/gallery-grid";
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
   return (
-    <main>
-      <section className="py-12 md:py-24">
-        <div className="mx-auto w-full max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
-              User Gallery
-            </h1>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Browse profiles of our members and see who you might connect with.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-  )
+    <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <h1 className="mb-12 text-center text-4xl font-extrabold tracking-tight">
+        Gallery
+      </h1>
+      <GalleryGrid />
+    </div>
+  );
 }
