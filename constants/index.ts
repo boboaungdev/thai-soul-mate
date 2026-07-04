@@ -1,6 +1,6 @@
-export const APP_NAME = "Siam Soulmates"
+export const APP_NAME = "SIAM SOULMATES"
 export const APP_TAGLINE = "One-to-One Matchmaking"
-export const COMPANY_NAME = "Siam Soulmates Co., Ltd."
+export const COMPANY_NAME = "SIAM SOULMATES Co., Ltd."
 
 export const CONTACT = {
   email: "contact@siamsoulmates.com",

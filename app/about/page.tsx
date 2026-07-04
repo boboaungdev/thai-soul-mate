@@ -26,16 +26,17 @@ export default function AboutPage() {
             </p>
 
             <p className="text-muted-foreground md:text-xl">
-              <StyledAppName /> you don&apos;t have time for dating apps that
-              offer no real value, and you don&apos;t have the time to engage
-              with individuals who aren&apos;t the right fit for YOU.
+              <StyledAppName />
+              &nbsp;you don&apos;t have time for dating apps that offer no real
+              value, and you don&apos;t have the time to engage with individuals
+              who aren&apos;t the right fit for YOU.
             </p>
 
             <p className="text-muted-foreground md:text-xl">
-              <StyledAppName /> understands you are at a stage in your life
-              where everything is in place, and all that&apos;s missing is the
-              right person—someone with whom you can share the rest of your life
-              in happiness.
+              <StyledAppName /> &nbsp;understands you are at a stage in your
+              life where everything is in place, and all that&apos;s missing is
+              the right person—someone with whom you can share the rest of your
+              life in happiness.
             </p>
 
             <p className="text-muted-foreground md:text-xl">
@@ -45,7 +46,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-muted-foreground md:text-xl">
-              <StyledAppName /> takes the time to understand each
+              <StyledAppName /> &nbsp;takes the time to understand each
               individual&apos;s values, lifestyle, and relationship goals to
               connect you with your future life partner.
             </p>
