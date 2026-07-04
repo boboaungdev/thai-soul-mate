@@ -7,5 +7,4 @@ export const CONTACT = {
   whatsapp: "+66 62 060 4000",
   facebook: "https://www.facebook.com/siamsoulmates",
   line: "https://line.me/R/ti/p/@siamsoulmates",
-  telegram: "https://t.me/siamsoulmates",
 } as const

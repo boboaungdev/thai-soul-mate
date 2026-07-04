@@ -96,21 +96,6 @@ export function Footer() {
                   Line
                 </a>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="rounded-sm"
-              >
-                <a
-                  href="https://t.me/siamsoulmates"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTelegramPlane className="size-4" />
-                  Telegram
-                </a>
-              </Button>
             </div>
           </div>
         </div>

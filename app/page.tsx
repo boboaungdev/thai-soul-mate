@@ -168,7 +168,7 @@ export default function HomePage() {
               <Textarea
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                placeholder="I enjoy travel, food, and meeting new people."
+                placeholder="I am a 50-year-old professional looking for a serious relationship..."
                 rows={4}
                 className="min-h-[160px] resize-none"
               />
