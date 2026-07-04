@@ -137,7 +137,9 @@ export default function AboutPage() {
               </Avatar>
               <CardHeader className="px-0">
                 <CardTitle className="text-xl font-semibold">Sham</CardTitle>
-                <CardDescription className="text-muted-foreground">Co-Founder & CEO</CardDescription>
+                <CardDescription className="text-muted-foreground">
+                  Co-Founder & CEO
+                </CardDescription>
               </CardHeader>
               <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <Link href="#">
@@ -160,8 +162,12 @@ export default function AboutPage() {
                 <AvatarFallback>JS</AvatarFallback>
               </Avatar>
               <CardHeader className="px-0">
-                <CardTitle className="text-xl font-semibold">Jane Smith</CardTitle>
-                <CardDescription className="text-muted-foreground">Head of Matchmaking</CardDescription>
+                <CardTitle className="text-xl font-semibold">
+                  Jane Smith
+                </CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Head of Matchmaking
+                </CardDescription>
               </CardHeader>
               <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <Link href="#">
@@ -179,7 +185,9 @@ export default function AboutPage() {
               </Avatar>
               <CardHeader className="px-0">
                 <CardTitle className="text-xl font-semibold">Bo Bo</CardTitle>
-                <CardDescription className="text-muted-foreground">Lead Developer</CardDescription>
+                <CardDescription className="text-muted-foreground">
+                  Lead Developer
+                </CardDescription>
               </CardHeader>
               <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <Link href="#">
