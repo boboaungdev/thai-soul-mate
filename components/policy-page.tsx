@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 import { APP_NAME } from "@/constants"
+import { StyledAppName } from "./styled-app-name"
 
 type PolicyContent = {
   heading: string
@@ -11,6 +12,24 @@ type PolicyContent = {
 type PolicyPageProps = {
   title: string
   content: PolicyContent[]
+}
+
+function AppNameReplacer({ text }: { text: string }) {
+  if (!text.includes(APP_NAME)) {
+    return text
+  }
+
+  const parts = text.split(APP_NAME)
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part.replace(/'/g, "&apos;")}
+          {i < parts.length - 1 && <StyledAppName />}
+        </span>
+      ))}
+    </>
+  )
 }
 
 export function PolicyPage({ title, content }: PolicyPageProps) {
@@ -23,7 +42,7 @@ export function PolicyPage({ title, content }: PolicyPageProps) {
             className="inline-flex items-center gap-2 rounded-full px-1 py-2 text-sm font-medium text-muted-foreground transition hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <ArrowLeft className="size-4" />
-            Back to {APP_NAME}
+            <span>Back to</span> <StyledAppName />
           </Link>
 
           <header className="mt-8 sm:mt-12">
@@ -40,8 +59,8 @@ export function PolicyPage({ title, content }: PolicyPageProps) {
                     <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
                       {section.heading}
                     </h2>
-                    <div className="mt-4 text-muted-foreground whitespace-pre-line">
-                      {section.text}
+                    <div className="mt-4 whitespace-pre-line text-muted-foreground">
+                      <AppNameReplacer text={section.text} />
                     </div>
                   </section>
                 ))}
